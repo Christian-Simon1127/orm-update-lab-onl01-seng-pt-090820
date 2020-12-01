@@ -70,7 +70,7 @@ class Student
   end
   
   def self.new_from_db(arr)
-    student = Student.new(arr[0], arr[1], arr[2])
+    student = Student.new(arr[1], arr[2], arr[0])
   end
 
 end
