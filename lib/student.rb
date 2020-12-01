@@ -36,6 +36,7 @@ class Student
     UPDATE students SET students.name, students.grade, 
     WHERE students.id = ?;
     SQL
+    
     DB[:conn].execute(sql, self.id)
   end
   
