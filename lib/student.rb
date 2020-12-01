@@ -66,7 +66,7 @@ class Student
     WHERE name = ?
     SQL
     
-    DB[:conn].execute(sql, name).map
+    self.new_from_db(DB[:conn].execute(sql, name).map {|item| item})
   end
   
   def self.new_from_db(arr)
